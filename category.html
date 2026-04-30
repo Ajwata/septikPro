@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог послуг SeptikPro — септики, свердловини, кесони, криниці.">
+    <title>Каталог — SeptikPro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header header--solid" id="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <span class="logo__icon">S</span>
+                <span class="logo__text">SeptikPro</span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <ul class="nav__list" id="navList">
+                    <li><a href="index.html" class="nav__link">Головна</a></li>
+                    <li class="nav__item nav__item--dropdown">
+                        <button class="nav__link nav__dropdown-toggle" type="button">
+                            Каталог <span class="caret">▾</span>
+                        </button>
+                        <ul class="nav__dropdown" id="navDropdown">
+                            <!-- Filled by JS -->
+                        </ul>
+                    </li>
+                    <li><a href="index.html#about" class="nav__link">Про нас</a></li>
+                    <li><a href="index.html#contacts" class="nav__link">Контакти</a></li>
+                </ul>
+                <div class="nav__contact">
+                    <a href="tel:+380956605505" class="nav__phone">+38 095 660 55 05</a>
+                    <a href="tel:+380676605505" class="nav__phone">+38 067 660 55 05</a>
+                </div>
+            </nav>
+
+            <div class="header__right">
+                <div class="header__messengers">
+                    <a href="viber://chat/?number=%2B380956605505" class="header-msg" aria-label="Viber"><img src="img/viber.png" alt=""></a>
+                    <a href="https://t.me/+380956605505" target="_blank" rel="noopener" class="header-msg" aria-label="Telegram"><img src="img/Telegram.png" alt=""></a>
+                    <a href="https://wa.me/380956605505" target="_blank" rel="noopener" class="header-msg" aria-label="WhatsApp"><img src="img/whatsapp.png" alt=""></a>
+                </div>
+                <div class="header__phones">
+                    <a href="tel:+380956605505" class="header__phone-link">+38 095 660 55 05</a>
+                    <a href="tel:+380676605505" class="header__phone-link">+38 067 660 55 05</a>
+                </div>
+                <button class="burger" id="burger" aria-label="Відкрити меню">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <div class="nav__overlay" id="navOverlay"></div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="breadcrumbs">
+                <a href="index.html">Головна</a>
+                <span class="breadcrumbs__sep">›</span>
+                <a href="index.html#catalog">Каталог</a>
+                <span class="breadcrumbs__sep">›</span>
+                <span class="breadcrumbs__current" id="bcCurrent">Категорія</span>
+            </nav>
+            <div class="page-hero__inner">
+                <h1 class="page-hero__title" id="pageTitle">Категорія</h1>
+                <p class="page-hero__desc" id="pageDesc">Опис категорії</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="catalog catalog--page">
+        <div class="container">
+            <div class="catalog-page__header">
+                <h2 class="catalog-page__count" id="productsCount"></h2>
+            </div>
+            <div class="catalog__products" id="productsGrid">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container cta__inner">
+            <div>
+                <h2 class="cta__title">Не знаєте, що обрати?</h2>
+                <p class="cta__text">Безкоштовна консультація — наш інженер допоможе підібрати оптимальне рішення для вашої ділянки.</p>
+            </div>
+            <div class="cta__actions">
+                <a href="viber://chat/?number=%2B380956605505" class="btn btn--primary">Замовити в Viber</a>
+                <a href="index.html#contacts" class="btn btn--outline-dark">Контакти</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__col">
+                <div class="logo">
+                    <span class="logo__icon">S</span>
+                    <span class="logo__text">SeptikPro</span>
+                </div>
+                <p class="footer__text">Надійні рішення для вашого дому. Септики, свердловини, криниці під ключ.</p>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Каталог</h4>
+                <ul class="footer__list" id="footerCategories">
+                    <!-- Filled by JS -->
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Контакти</h4>
+                <ul class="footer__list">
+                    <li><a href="tel:+380956605505">+38 095 660 55 05</a></li>
+                    <li><a href="tel:+380676605505">+38 067 660 55 05</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>© 2026 SeptikPro. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for product details -->
+    <div class="modal" id="productModal">
+        <div class="modal__backdrop" id="modalBackdrop"></div>
+        <div class="modal__dialog">
+            <button class="modal__close" id="modalClose" aria-label="Закрити">×</button>
+            <div class="modal__content" id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+    <script src="category.js"></script>
+</body>
+</html>

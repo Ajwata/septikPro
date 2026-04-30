@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SeptikPro — встановлення септиків, буріння свердловин, кесони, криниці. 17 років досвіду, без передоплати, монтаж за 1 день.">
+    <title>SeptikPro — Надійні рішення для вашого дому</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <span class="logo__icon">S</span>
+                <span class="logo__text">SeptikPro</span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <ul class="nav__list" id="navList">
+                    <li><a href="index.html" class="nav__link">Головна</a></li>
+                    <li class="nav__item nav__item--dropdown">
+                        <button class="nav__link nav__dropdown-toggle" type="button">
+                            Каталог <span class="caret">▾</span>
+                        </button>
+                        <ul class="nav__dropdown" id="navDropdown">
+                            <!-- Filled by JS from CATEGORY_META -->
+                        </ul>
+                    </li>
+                    <li><a href="index.html#about" class="nav__link">Про нас</a></li>
+                    <li><a href="index.html#contacts" class="nav__link">Контакти</a></li>
+                </ul>
+                <div class="nav__contact">
+                    <a href="tel:+380956605505" class="nav__phone">+38 095 660 55 05</a>
+                    <a href="tel:+380676605505" class="nav__phone">+38 067 660 55 05</a>
+                </div>
+            </nav>
+
+            <div class="header__right">
+                <div class="header__messengers">
+                    <a href="viber://chat/?number=%2B380956605505" class="header-msg" aria-label="Viber"><img src="img/viber.png" alt=""></a>
+                    <a href="https://t.me/+380956605505" target="_blank" rel="noopener" class="header-msg" aria-label="Telegram"><img src="img/Telegram.png" alt=""></a>
+                    <a href="https://wa.me/380956605505" target="_blank" rel="noopener" class="header-msg" aria-label="WhatsApp"><img src="img/whatsapp.png" alt=""></a>
+                </div>
+                <div class="header__phones">
+                    <a href="tel:+380956605505" class="header__phone-link">+38 095 660 55 05</a>
+                    <a href="tel:+380676605505" class="header__phone-link">+38 067 660 55 05</a>
+                </div>
+                <button class="burger" id="burger" aria-label="Відкрити меню">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <div class="nav__overlay" id="navOverlay"></div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero__bg"></div>
+        <div class="hero__overlay"></div>
+        <div class="container hero__inner">
+            <div class="hero__content">
+                <span class="hero__badge">17 років досвіду</span>
+                <h1 class="hero__title">Надійні та довговічні рішення для вашого дому</h1>
+                <p class="hero__subtitle">Встановлення септиків під ключ від виробника. Без передоплати, монтаж за 1 день, мінімальна ціна.</p>
+                <div class="hero__features">
+                    <div class="hero__feature"><span>✓</span> Без передоплати</div>
+                    <div class="hero__feature"><span>✓</span> Монтаж за 1 день</div>
+                    <div class="hero__feature"><span>✓</span> Гарантія якості</div>
+                </div>
+                <div class="hero__buttons">
+                    <a href="#catalog" class="btn btn--primary">Переглянути каталог</a>
+                    <a href="#contacts" class="btn btn--outline">Замовити консультацію</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATALOG (Categories grid) -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <h2 class="section__title">Каталог послуг</h2>
+            <p class="section__subtitle">Оберіть категорію, щоб переглянути товари та послуги</p>
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="container about__inner">
+            <div class="about__content">
+                <h2 class="section__title section__title--left">Про SeptikPro</h2>
+                <p class="about__text">Ми — команда професіоналів, що понад 17 років займається встановленням автономних систем каналізації, бурінням свердловин та облаштуванням криниць.</p>
+                <p class="about__text">Працюємо на результат: всі роботи виконуємо під ключ, з власними матеріалами та технікою. Гарантія якості — на кожен етап монтажу.</p>
+                <ul class="about__list">
+                    <li>✓ Власне виробництво залізобетонних кілець</li>
+                    <li>✓ Сертифіковані матеріали та обладнання</li>
+                    <li>✓ Робота по всій Україні</li>
+                    <li>✓ Безкоштовна консультація та виїзд інженера</li>
+                </ul>
+            </div>
+            <div class="about__stats">
+                <div class="stat">
+                    <div class="stat__num">17+</div>
+                    <div class="stat__label">років досвіду</div>
+                </div>
+                <div class="stat">
+                    <div class="stat__num">2000+</div>
+                    <div class="stat__label">встановлених септиків</div>
+                </div>
+                <div class="stat">
+                    <div class="stat__num">1</div>
+                    <div class="stat__label">день на монтаж</div>
+                </div>
+                <div class="stat">
+                    <div class="stat__num">100%</div>
+                    <div class="stat__label">гарантія</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2 class="section__title">Зв'яжіться з нами</h2>
+            <p class="section__subtitle">Завжди на зв'язку — оберіть зручний спосіб комунікації</p>
+
+            <div class="contacts__grid">
+                <a href="tel:+380956605505" class="contact-card">
+                    <div class="contact-card__icon">📞</div>
+                    <div class="contact-card__title">Телефон</div>
+                    <div class="contact-card__value">+38 095 660 55 05</div>
+                    <div class="contact-card__hint">Пн–Нд, 8:00–20:00</div>
+                </a>
+
+                <a href="tel:+380676605505" class="contact-card">
+                    <div class="contact-card__icon">📱</div>
+                    <div class="contact-card__title">Мобільний</div>
+                    <div class="contact-card__value">+38 067 660 55 05</div>
+                    <div class="contact-card__hint">Без вихідних</div>
+                </a>
+
+                <div class="contact-card contact-card--messengers">
+                    <div class="contact-card__icon">💬</div>
+                    <div class="contact-card__title">Месенджери</div>
+                    <div class="contact-card__hint">Напишіть нам у будь-який зручний</div>
+                    <div class="messenger-buttons">
+                        <a href="viber://chat/?number=%2B380956605505" class="messenger-btn messenger-btn--viber">
+                            <img src="img/viber.png" alt="" class="messenger-btn__icon">
+                            <span>Viber</span>
+                        </a>
+                        <a href="https://t.me/+380956605505" target="_blank" rel="noopener" class="messenger-btn messenger-btn--telegram">
+                            <img src="img/Telegram.png" alt="" class="messenger-btn__icon">
+                            <span>Telegram</span>
+                        </a>
+                        <a href="https://wa.me/380956605505" target="_blank" rel="noopener" class="messenger-btn messenger-btn--whatsapp">
+                            <img src="img/whatsapp.png" alt="" class="messenger-btn__icon">
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__col">
+                <div class="logo">
+                    <span class="logo__icon">S</span>
+                    <span class="logo__text">SeptikPro</span>
+                </div>
+                <p class="footer__text">Надійні рішення для вашого дому. Септики, свердловини, криниці під ключ.</p>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Каталог</h4>
+                <ul class="footer__list" id="footerCategories">
+                    <!-- Filled by JS -->
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Контакти</h4>
+                <ul class="footer__list">
+                    <li><a href="tel:+380956605505">+38 095 660 55 05</a></li>
+                    <li><a href="tel:+380676605505">+38 067 660 55 05</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>© 2026 SeptikPro. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>
