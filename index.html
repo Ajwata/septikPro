@@ -63,10 +63,16 @@
     <section class="hero" id="home">
         <div class="hero__bg"></div>
         <div class="hero__overlay"></div>
+
+        <!-- Decorative floating rings -->
+        <div class="hero__ring hero__ring--1" aria-hidden="true"></div>
+        <div class="hero__ring hero__ring--2" aria-hidden="true"></div>
+        <div class="hero__ring hero__ring--3" aria-hidden="true"></div>
+
         <div class="container hero__inner">
             <div class="hero__content">
                 <span class="hero__badge">17 років досвіду</span>
-                <h1 class="hero__title">Надійні та довговічні рішення для вашого дому</h1>
+                <h1 class="hero__title">Надійні та довговічні рішення <em>для вашого дому</em></h1>
                 <p class="hero__subtitle">Встановлення септиків під ключ від виробника. Без передоплати, монтаж за 1 день, мінімальна ціна.</p>
                 <div class="hero__features">
                     <div class="hero__feature"><span>✓</span> Без передоплати</div>
@@ -79,13 +85,23 @@
                 </div>
             </div>
         </div>
+
+        <!-- Scroll indicator -->
+        <div class="hero__scroll" aria-hidden="true">Гортайте</div>
+
+        <!-- Wave separator -->
+        <div class="hero__wave" aria-hidden="true">
+            <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+            </svg>
+        </div>
     </section>
 
     <!-- CATALOG (Categories grid) -->
     <section class="catalog" id="catalog">
         <div class="container">
-            <h2 class="section__title">Каталог послуг</h2>
-            <p class="section__subtitle">Оберіть категорію, щоб переглянути товари та послуги</p>
+            <h2 class="section__title reveal">Каталог послуг</h2>
+            <p class="section__subtitle reveal reveal--d1">Оберіть категорію, щоб переглянути товари та послуги</p>
             <div class="categories-grid" id="categoriesGrid">
                 <!-- Filled by JS -->
             </div>
@@ -96,30 +112,30 @@
     <section class="about" id="about">
         <div class="container about__inner">
             <div class="about__content">
-                <h2 class="section__title section__title--left">Про SeptikPro</h2>
-                <p class="about__text">Ми — команда професіоналів, що понад 17 років займається встановленням автономних систем каналізації, бурінням свердловин та облаштуванням криниць.</p>
-                <p class="about__text">Працюємо на результат: всі роботи виконуємо під ключ, з власними матеріалами та технікою. Гарантія якості — на кожен етап монтажу.</p>
-                <ul class="about__list">
-                    <li>✓ Власне виробництво залізобетонних кілець</li>
-                    <li>✓ Сертифіковані матеріали та обладнання</li>
-                    <li>✓ Робота по всій Україні</li>
-                    <li>✓ Безкоштовна консультація та виїзд інженера</li>
+                <h2 class="section__title section__title--left reveal">Про SeptikPro</h2>
+                <p class="about__text reveal reveal--d1">Ми — команда професіоналів, що понад 17 років займається встановленням автономних систем каналізації, бурінням свердловин та облаштуванням криниць.</p>
+                <p class="about__text reveal reveal--d2">Працюємо на результат: всі роботи виконуємо під ключ, з власними матеріалами та технікою. Гарантія якості — на кожен етап монтажу.</p>
+                <ul class="about__list reveal reveal--d3">
+                    <li>Власне виробництво залізобетонних кілець</li>
+                    <li>Сертифіковані матеріали та обладнання</li>
+                    <li>Робота по всій Україні</li>
+                    <li>Безкоштовна консультація та виїзд інженера</li>
                 </ul>
             </div>
             <div class="about__stats">
-                <div class="stat">
+                <div class="stat reveal reveal--d1">
                     <div class="stat__num">17+</div>
                     <div class="stat__label">років досвіду</div>
                 </div>
-                <div class="stat">
+                <div class="stat reveal reveal--d2">
                     <div class="stat__num">2000+</div>
                     <div class="stat__label">встановлених септиків</div>
                 </div>
-                <div class="stat">
+                <div class="stat reveal reveal--d3">
                     <div class="stat__num">1</div>
                     <div class="stat__label">день на монтаж</div>
                 </div>
-                <div class="stat">
+                <div class="stat reveal reveal--d4">
                     <div class="stat__num">100%</div>
                     <div class="stat__label">гарантія</div>
                 </div>
@@ -130,25 +146,25 @@
     <!-- CONTACTS -->
     <section class="contacts" id="contacts">
         <div class="container">
-            <h2 class="section__title">Зв'яжіться з нами</h2>
-            <p class="section__subtitle">Завжди на зв'язку — оберіть зручний спосіб комунікації</p>
+            <h2 class="section__title reveal">Зв'яжіться з нами</h2>
+            <p class="section__subtitle reveal reveal--d1">Завжди на зв'язку — оберіть зручний спосіб комунікації</p>
 
             <div class="contacts__grid">
-                <a href="tel:+380956605505" class="contact-card">
+                <a href="tel:+380956605505" class="contact-card reveal reveal--d1">
                     <div class="contact-card__icon">📞</div>
                     <div class="contact-card__title">Телефон</div>
                     <div class="contact-card__value">+38 095 660 55 05</div>
                     <div class="contact-card__hint">Пн–Нд, 8:00–20:00</div>
                 </a>
 
-                <a href="tel:+380676605505" class="contact-card">
+                <a href="tel:+380676605505" class="contact-card reveal reveal--d2">
                     <div class="contact-card__icon">📱</div>
                     <div class="contact-card__title">Мобільний</div>
                     <div class="contact-card__value">+38 067 660 55 05</div>
                     <div class="contact-card__hint">Без вихідних</div>
                 </a>
 
-                <div class="contact-card contact-card--messengers">
+                <div class="contact-card contact-card--messengers reveal reveal--d3">
                     <div class="contact-card__icon">💬</div>
                     <div class="contact-card__title">Месенджери</div>
                     <div class="contact-card__hint">Напишіть нам у будь-який зручний</div>

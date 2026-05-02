@@ -7,11 +7,12 @@ if (categoriesGrid) {
         return acc;
     }, {});
 
-    categoriesGrid.innerHTML = Object.entries(CATEGORY_META).map(([key, meta]) => {
+    categoriesGrid.innerHTML = Object.entries(CATEGORY_META).map(([key, meta], index) => {
         const count = productCounts[key] || 0;
         const countLabel = count === 1 ? '1 позиція' : (count >= 2 && count <= 4) ? `${count} позиції` : `${count} позицій`;
+        const delay = index % 4;
         return `
-            <a href="category.html?cat=${key}" class="category-card">
+            <a href="category.html?cat=${key}" class="category-card reveal reveal--d${delay + 1}">
                 <div class="category-card__image">
                     <div class="product__placeholder">
                         <div class="product__placeholder-icon">🏗️</div>
@@ -26,10 +27,13 @@ if (categoriesGrid) {
                     <p class="category-card__desc">${meta.desc}</p>
                     <div class="category-card__meta">
                         <span class="category-card__count">${countLabel}</span>
-                        <span class="category-card__link">Переглянути →</span>
+                        <span class="category-card__link">Переглянути <span class="arrow">→</span></span>
                     </div>
                 </div>
             </a>
         `;
     }).join('');
+
+    // Trigger reveal for dynamically added cards
+    document.querySelectorAll('.category-card.reveal').forEach(el => revealObserver.observe(el));
 }

@@ -1,5 +1,4 @@
 // ============ SHARED HEADER / FOOTER LOGIC ============
-// Runs on every page (index.html, category.html)
 
 // ---- Mobile menu ----
 const burger = document.getElementById('burger');
@@ -25,7 +24,6 @@ burger.addEventListener('click', () => {
 });
 navOverlay.addEventListener('click', closeMenu);
 
-// Delegated: any link inside nav (incl. dynamically rendered dropdown) closes the menu
 document.querySelector('.nav__list')?.addEventListener('click', (e) => {
     if (e.target.closest('a')) closeMenu();
 });
@@ -47,7 +45,6 @@ dropdownToggles.forEach(btn => {
     });
 });
 
-// Close dropdown when clicking outside (desktop)
 document.addEventListener('click', (e) => {
     if (!e.target.closest('.nav__item--dropdown')) {
         document.querySelectorAll('.nav__item--dropdown.open').forEach(i => i.classList.remove('open'));
@@ -76,9 +73,17 @@ if (footerCategories && typeof CATEGORY_META !== 'undefined') {
 // ---- Header shadow on scroll ----
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-        header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
-    } else {
-        header.style.boxShadow = 'var(--shadow-sm)';
-    }
-});
+    header.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+// ---- Scroll reveal ----
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
